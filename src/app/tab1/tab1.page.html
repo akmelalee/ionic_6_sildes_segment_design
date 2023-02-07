@@ -1,0 +1,1168 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="3">
+        <div class="bg-icon">
+          <ion-icon name="heart" color="medium"></ion-icon>
+        </div>
+        <ion-badge color="warning">9</ion-badge>
+      </ion-col>
+      <ion-col size="3">
+        <div class="bg-icon">
+          <ion-icon name="notifications" color="medium"></ion-icon>
+        </div>
+        <ion-badge color="warning">9</ion-badge>
+      </ion-col>
+      <ion-col size="3">
+        <div class="bg-icon">
+          <ion-icon name="mail" color="medium"></ion-icon>
+        </div>
+        <ion-badge color="warning">9</ion-badge>
+      </ion-col>
+      <ion-col size="3">
+        <div class="bg-icon">
+          <ion-icon name="camera" color="medium"></ion-icon>
+        </div>
+        <ion-badge color="warning">9</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item lines="none">
+      <ion-icon name="eye" slot="start" class="start"></ion-icon>
+      <ion-label>
+        <div class="ion-label-space">
+          <p>New Members</p>
+          <p>Show All <span></span></p>
+        </div>
+      </ion-label>
+      <ion-badge color="warning" slot="end" class="end">100</ion-badge>
+
+    </ion-item>
+    <ion-card>
+      <ion-slides pager="true">
+        <ion-slide>
+          <div [ngSwitch]="type" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Akmal Ali<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="type">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="type" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5"> Ahmed<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="type">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="type" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Junaid<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="type">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="type" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Faisal<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="type">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="type" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Asad<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="type">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+
+    <ion-item lines="none">
+      <ion-icon name="eye" slot="start" class="start"></ion-icon>
+      <ion-label>
+        <div class="ion-label-space">
+          <p>Recent Visitors</p>
+          <p>Show All <span></span></p>
+        </div>
+      </ion-label>
+      <ion-badge color="warning" slot="end" class="end">3</ion-badge>
+
+    </ion-item>
+
+    <ion-card>
+      <ion-slides pager="true">
+        <ion-slide>
+          <div [ngSwitch]="recent" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Akmal Ali<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="recent">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="recent" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5"> Ahmed<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="recent">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="recent" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Junaid<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="recent">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="recent" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Faisal<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="recent">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+        <ion-slide>
+          <div [ngSwitch]="recent" style="width: 100%;
+          height: 100%;">
+            <div *ngSwitchCase="'images'" class="slide-first">
+              <div class="top">
+                <h2 class="m-0 ml-5">Asad<span> | 23</span></h2>
+                <ion-icon name="heart-circle"></ion-icon>
+              </div>
+              <div class="ion-text-start">
+                <p class="m-0 ml-5">Pharmacist</p>
+                <p class="m-0 ml-5">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'book'" class="slide-second">
+              <ion-list class="book-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>My Deen</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Sect</h4>
+                    <h2>Sometimes Pray</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Pray</h4>
+                    <h2>Sunni Muslim</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Religious History</h4>
+                    <h2>Muslim Since Birth</h2>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Polygyny</h4>
+                    <h2>No</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div *ngSwitchCase="'person'" class="slide-third">
+              <ion-list class="person-list p-0">
+                <ion-list-header>
+
+                  <ion-item lines="none" style="width: 100%;">
+                    <ion-label>About Me</ion-label>
+                    <ion-thumbnail slot="end">
+                      <img alt="Silhouette of mountains"
+                        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                    </ion-thumbnail>
+                  </ion-item>
+                </ion-list-header>
+
+                <ion-label>
+                  <p>I have completed my Pharm D and currently employed. i am a very simple girl</p>
+                </ion-label>
+
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Asian- Pakistani</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Never Married</h4>
+                  </ion-label>
+                </ion-item>
+                <ion-item lines="none" class="item-style">
+                  <ion-icon name="moon" slot="start"></ion-icon>
+                  <ion-label class="ion-text-center">
+                    <h4>Don't Have Children</h4>
+                  </ion-label>
+                </ion-item>
+              </ion-list>>
+            </div>
+          </div>
+
+
+          <ion-toolbar>
+            <ion-segment value="images" [(ngModel)]="recent">
+              <ion-segment-button value="images">
+                <ion-icon name="images"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="book">
+                <ion-icon name="book"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="person">
+                <ion-icon name="person"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </ion-list>
+</ion-content>

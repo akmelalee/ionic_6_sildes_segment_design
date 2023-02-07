@@ -1,0 +1,109 @@
+
+ion-card{
+    box-shadow: none;
+}
+
+.ion-label-space{
+    display: flex;
+    justify-content: space-between;
+}
+
+ion-item{
+    .start{
+        margin-right: 5px;
+    }
+    .end{
+        margin-left: 5px;
+    }
+}
+ion-slides {
+    height: 460px;
+    --bullet-background: black;
+    .slide-first{
+        width: 100%;
+        height: 90%;
+        background: aqua;
+        padding: 10px;
+        margin-bottom: 10%;
+        border-radius: 10px;
+    .top{
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+    }
+    .slide-second{
+        width: 100%;
+        height: 90%;
+        background: #489392;
+        margin-bottom: 10%;
+        border-radius: 10px;
+        .book-list{
+            background: transparent;
+            ion-list-header{
+                padding: 0 !important;
+                // width: 100%;
+                --background: transparent;
+                ion-item{
+                    --background: #037474;
+                    padding: 0 !important;
+                    color: white !important;
+                    border-radius: 10px 10px 0px 0px;
+                }
+        
+            }
+            .item-style{
+                --background: #037474;
+                color: white;
+                border-radius: 10px;
+                margin: 10px 10px 0px 10px;
+                ion-icon{
+                    color: white;
+                }
+            }
+          }
+    }
+    .slide-third{
+        width: 100%;
+        height: 90%;
+        background: #489392;
+        margin-bottom: 10%;
+        border-radius: 10px;
+        .person-list{
+            background: transparent;
+            ion-list-header{
+                padding: 0 !important;
+                // width: 100%;
+                --background: transparent;
+                ion-item{
+                    --background: #037474;
+                    padding: 0 !important;
+                    color: white !important;
+                    border-radius: 10px 10px 0px 0px;
+                }
+        
+            }
+            ion-label{
+                p{
+                    color: white;
+                    text-align: start;
+                    padding: 15px;
+                }
+            }
+            .item-style{
+                --background: transparent !important;
+                color: white;
+                // border-radius: 10px;
+                margin: 10px 10px 0px 10px;
+                ion-label{
+                    h4{
+                        text-align: start;
+                    }
+                }
+                ion-icon{
+                    color: white;
+                }
+            }
+        }
+    }
+  }
